@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eternatus Calculator</title>
-    <!-- Use Inter font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Use Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* This is a fallback, but we'll use a Tailwind class for the body */
+            background-color: #1a202c;
         }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4 bg-slate-950">
     <div class="bg-slate-900 text-gray-100 p-8 rounded-2xl shadow-2xl w-full max-w-md">
-        <!-- Calculator Title -->
         <h1 class="text-3xl font-bold mb-6 text-center text-cyan-400">Eternatus Power-Up & Move Calculator</h1>
         <p class="text-sm text-center mb-8 text-slate-300">
             Determine whether to power up your Eternatus or use candies for a max move.
         </p>
 
         <div class="space-y-6">
-            <!-- Attack IV Dropdown -->
             <div>
                 <label for="attackIV" class="block text-sm font-medium text-gray-300">Attack IV:</label>
                 <select id="attackIV" class="mt-1 block w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm text-gray-300 focus:outline-none focus:ring-cyan-600 focus:border-cyan-600 transition duration-150 ease-in-out">
@@ -39,31 +35,25 @@
                 </select>
             </div>
 
-            <!-- Candies Available Input -->
             <div>
                 <label for="candiesAvailable" class="block text-sm font-medium text-gray-300">Candies Available:</label>
                 <input type="number" id="candiesAvailable" placeholder="e.g., 200" class="mt-1 block w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-cyan-600 focus:border-cyan-600 transition duration-150 ease-in-out">
             </div>
             
-            <!-- XL Candies Available Input -->
             <div>
                 <label for="xlCandiesAvailable" class="block text-sm font-medium text-gray-300">XL Candies Available:</label>
                 <input type="number" id="xlCandiesAvailable" placeholder="e.g., 50" class="mt-1 block w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-cyan-600 focus:border-cyan-600 transition duration-150 ease-in-out">
             </div>
         </div>
 
-        <!-- Calculate Button -->
         <button id="calculateBtn" class="mt-8 w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-offset-2 focus:ring-offset-slate-900">
             Calculate Best Option
         </button>
 
-        <!-- Results Output Area -->
         <div id="resultsOutput" class="mt-8 p-4 bg-slate-800 rounded-lg text-center text-gray-300 border border-slate-700 hidden">
-            <!-- Results will be displayed here -->
             <p>Awaiting calculation logic...</p>
         </div>
 
-        <!-- Source Note -->
         <div class="mt-8 text-center">
             <p class="text-xs text-cyan-400">
                 Data source: <a href="https://old.reddit.com/r/TheSilphRoad/comments/1mv8vm6/an_analysis_of_eternatus_max_move_vs_levelup/" target="_blank" class="underline hover:text-cyan-300 transition-colors duration-150">An Analysis of Eternatus: Max Move vs. Level-up</a> by user "technoxenoholic" on Reddit.
@@ -71,7 +61,6 @@
         </div>
     </div>
 
-    <!-- JavaScript for button functionality -->
     <script>
         // Get references to the HTML elements
         const calculateBtn = document.getElementById('calculateBtn');
