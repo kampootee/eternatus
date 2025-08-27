@@ -13,6 +13,16 @@
             font-family: 'Inter', sans-serif;
             background-color: #1a202c;
         }
+        /* Hide the up and down buttons for number inputs */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4 bg-slate-950">
@@ -37,12 +47,12 @@
 
             <div>
                 <label for="candiesAvailable" class="block text-sm font-medium text-gray-300">Candies Available:</label>
-                <input type="number" id="candiesAvailable" placeholder="e.g., 200" class="mt-1 block w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-cyan-600 focus:border-cyan-600 transition duration-150 ease-in-out">
+                <input type="number" id="candiesAvailable" placeholder="e.g., 5000" class="mt-1 block w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-cyan-600 focus:border-cyan-600 transition duration-150 ease-in-out">
             </div>
             
             <div>
                 <label for="xlCandiesAvailable" class="block text-sm font-medium text-gray-300">XL Candies Available:</label>
-                <input type="number" id="xlCandiesAvailable" placeholder="e.g., 50" class="mt-1 block w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-cyan-600 focus:border-cyan-600 transition duration-150 ease-in-out">
+                <input type="number" id="xlCandiesAvailable" placeholder="e.g., 350" class="mt-1 block w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-cyan-600 focus:border-cyan-600 transition duration-150 ease-in-out">
             </div>
         </div>
 
